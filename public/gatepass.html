@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pass generator</title>
+    <link href="css/common.css" rel="stylesheet" >
+    <link href="css/gatepass.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+</head>
+<body>
+
+<header class="header">
+  <div class="left-section">
+    <div class="logo-block">
+    <img src="rites_logo2.png" alt="RITES Logo" class="logo-img">
+    <p class="gov-text"><b>A Government of India Enterprise</b></p>
+    </div>
+  </div>
+  <div class="center-section">
+    <h2>VISITOR MANAGEMENT SYSTEM</h2>
+  </div>
+  <div class="right-section">
+    <button class="user-button">shikhar ⏷</button>
+  </div>
+</header>
+
+<main>
+    <div class="container">
+    <div class="heading-container">  
+        <div class="form-title-bar">
+        <p class="form-title">
+            Generate Gate Pass
+        </p>
+        <span class="heading-icons">
+            <i class="fas fa-home"></i>
+            <i class="fa-solid fa-file"></i>
+        </span>
+        </div>
+    </div> 
+    <form action="/generate-pass" method="POST">
+        <div class="camera-row">
+          <div class="image-preview">
+            <video id="video" width="250" height="200" autoplay></video>
+          </div>
+
+          <div class="image-preview">
+          <canvas id="canvas" width="250" height="200" style="display:none;"></canvas>
+          </div>
+        </div>
+
+        <div class="btn-div">
+          <button type="button" class="photo-btn">
+          <i class="fas fa-camera"></i> Click Visitor Photo
+          </button>
+        </div>
+
+        <input type="hidden" name="photo" id="photo-input">
+
+        <div class="form-row">
+            <div class="form-group">
+            <label for="phone-no">Mobile Number</label>
+            <input type="number" id="phone-no" name="mobile" required>
+            </div>
+            <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+            <label for="org-name">Organization Name</label>
+            <input type="text" id="org-name" name="organization" required>
+            </div>
+            <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>  
+            </div>
+        </div>
+        <div class="form-row">
+             <div class="form-group">
+            <label for="desg">Designation</label>
+            <input type="text" id="desg" name="designation" required>
+            </div>
+            <div class="form-group">
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+                <option value="">select Country</option>
+                <option value="India">India</option>
+                <option value="Nepal">Nepal</option>
+                <option value="China">japan</option>
+            </select>  
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+            <label for="off-name">Officer Name</label>
+            <input type="text" id="off-name" name="officer_name" required>
+            </div>
+            <div class="form-group">
+            <label for="off-desg">Officer Designation</label>
+            <input type="text" id="off-desg" name="officer_designation" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+            <label for="purpose">Visiting purpose</label>
+            <input type="text" id="purpose" name="purpose" required>
+            </div>
+        </div>
+
+        <button type="submit" class="generate-btn">
+             <i class="fas fa-check-circle"></i>
+             Generate Pass
+        </button>
+        <button type="reset" class="reset-btn">
+            <i class="fas fa-undo-alt"></i>
+            Reset
+        </button>
+    </form>
+    </div>
+</main>
+
+<script src="js/app.js"></script>
+<script>
+  window.addEventListener("load", () => {
+    document.querySelector("form").reset();
+  });
+</script>
+
+
+
+</body>
+</html>

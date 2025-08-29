@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/summary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    
+<header class="header">
+  <div class="left-section">
+    <div class="logo-block">
+    <img src="rites_logo2.png" alt="RITES Logo" class="logo-img">
+    <p class="gov-text"><b>A Government of India Enterprise</b></p>
+    </div>
+  </div>
+
+  <div class="center-section">
+    <h2>VISITOR MANAGEMENT SYSTEM</h2>
+  </div>
+
+  <div class="right-section">
+    <button class="user-button">shikhar ⏷</button>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+  <div class="heading-container">  
+    <div class="form-title-bar">
+      <p class="form-title">
+        Visitor Summary report
+      </p>
+      <span class="heading-icons">
+        <i class="fas fa-home"></i>
+        <i class="fa-solid fa-file"></i>
+      </span>
+    </div>
+    </div>
+
+<div class="date-section">
+  <div class="date-group">
+    <label for="from-date">From date (dd-mm-yyyy)*</label>
+    <input type="date" id="from-date" required>
+  </div>
+
+  <div class="date-group">
+    <label for="to-date">To date (dd-mm-yyyy)*</label>
+    <input type="date" id="to-date" required>
+  </div>
+
+  <div class="date-group">
+    <button id="search-btn" class="action-btn search-btn">
+      <i class="material-icons">search</i> Search
+    </button>
+  </div>
+
+  <div class="date-group">
+    <button id="reset-btn" class="action-btn reset-btn">
+      <i class="material-icons">refresh</i> Reset
+    </button>
+  </div>
+</div>
+
+
+<hr class="divider">
+
+<div class="download-row">
+  <button class="download-btn"><i class="fa fa-download"></i> Download Report</button>
+</div>
+
+<div class="table-search-row">
+  <input type="text" class="table-search-input" placeholder="Search:">
+</div>
+
+
+  <div class="table-wrapper">
+    <table class="visitor-table">
+      <thead>
+        <tr>
+          <th>S.No.</th> 
+          <th>Mobile Number</th>
+          <th>Visitor Name</th>
+          <th>purpose</th>
+          <th>Visitor Organization</th>
+          <th>RITES Officer Name</th>
+          <th>Visiting Date</th>
+          <th>Visit In Time</th>
+          <th>Visit Out Time</th>
+        </tr>
+      </thead>  
+      <tbody>
+
+      </tbody>
+    </table>
+  </div>
+
+  </div>
+
+</main>
+
+<script src="js/summary.js"></script>
+</body>
+</html>

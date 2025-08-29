@@ -1,0 +1,94 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#003366;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+  padding: 10px 30px;
+  height: 200px;  
+  position: relative;
+}
+.logo-div{
+    position:relative;
+    display: inline-block;
+    top: 15%;
+    left: 5%;
+}
+.logo {
+  height: 80px;
+}
+.live-pic{
+    position: relative;
+    height:150px;
+    width:150px;
+    background-color: black;
+    right: 15%;
+    top: 10%;
+}
+.main-content{
+    padding: 20px 60px;
+}
+.main-heading {
+  text-align: center;
+  font-size: 28px;
+  color: #003366;
+  margin-bottom: 5px;
+}
+.sub-heading {
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 18px;
+  color: #003366;
+  margin-bottom: 20px;
+}
+.main-heading, .sub-heading {
+  line-height: 1.4;
+}
+hr {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 10px 0;
+}
+.details-table {
+  width: 100%;
+  box-shadow: 0 2px 12px #b5bdc3;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.details-table tr:nth-child(odd) {
+  background-color: white;
+}
+
+.details-table tr:nth-child(even) {
+  background-color: #babfc3;
+}
+.details-table td {
+  padding: 5px 10px;
+  font-size: 15px;
+  width: 50%;
+  border: 1px solid white;
+}
+.details-table td span {
+  font-weight: bold;
+  color: #000;
+}
+.top-details, .bottom-details {
+  font-size: 18px;  
+  font-weight: bold;
+  color: #003366;
+  margin: 10px 0 5px 0;
+}
+.signature {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
