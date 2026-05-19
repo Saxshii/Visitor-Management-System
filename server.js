@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const mysql = require("mysql2");
 const express = require("express");
 const bcrypt = require("bcryptjs");
@@ -29,6 +27,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
+require('dotenv').config();
 
 const database = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -60,9 +59,9 @@ app.post("/signup", (req, res) => {
     database.query(q, values, (err, result) => {
         if (err) {
             console.error("Error inserting user:", err);
-            res.status(500).send("Signup failed.");
+            res.json({ success: false, message: "Signup failed: " + err.message });
         } else {
-            res.redirect("/login.html");
+            res.json({ success: true });
         }
     });
 });
@@ -82,11 +81,9 @@ app.post("/login", (req, res) => {
 
         if (passwordMatch) {
             console.log("Login successful for:", user.email);
-            const encryptedEmail = encrypt(user.email);
-            console.log(`Encrypted email: ${encryptedEmail}`);
-            res.redirect("/dashboard.html");
+            res.json({ success: true, name: user.name, email: user.email });
         } else {
-            res.send("Wrong password.");
+            res.json({ success: false, message: "Wrong password." });
         }
     });
 });
@@ -197,11 +194,10 @@ app.patch('/api/visitor-punchout/:id', (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "signup.html"));
+    res.sendFile(path.join(__dirname, "public", "dashboard.html"));
 });
 
 // Start Server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
-
