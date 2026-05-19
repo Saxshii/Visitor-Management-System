@@ -20,21 +20,16 @@ Made an Visitor management System in my 6 weeks internship at RITES Lmt. gurugra
 ## Tech Stack
 
 ### Frontend
-- HTML
-- CSS
-- JavaScript
+- HTML, CSS, JavaScript
 
 ### Backend
-- Node.js
-- Express.js
+- Node.js, Express.js
 
 ### Database
 - MySQL
 
 ### Libraries & Tools
-- bcryptjs
-- mysql2
-- Canvas API
+- bcryptjs, mysql2, Canvas API
 
 ---
 
