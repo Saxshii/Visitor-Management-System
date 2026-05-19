@@ -97,33 +97,6 @@ Open in browser:
 http://localhost:3000
 ```
 
----
-
-## Screenshots
-
-### Login Page
-(Add screenshot here)
-
-### Dashboard
-(Add screenshot here)
-
-### Gate Pass Generation
-(Add screenshot here)
-
-### Reports Dashboard
-(Add screenshot here)
-
----
-
-## Future Improvements
-
-- QR-based Visitor Pass
-- Admin Role Management
-- Analytics Dashboard
-- Cloud Database Deployment
-
----
-
 ## Developed By
 
 **Sakshi **  
