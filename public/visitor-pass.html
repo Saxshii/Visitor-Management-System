@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor's pass</title>
+    <link rel="stylesheet" href="css/pass.css">
+</head>
+<body>
+
+    <header>
+<!-- logo on the left -->
+    <div class="logo-div">
+         <img class="logo" src="rites_logo.png" alt="rites logo">
+    </div>
+<!-- live pic on the right  -->
+    <div class="live-pic">
+      <img id="visitor-photo" src="img/placeholder.png" width="150" height="150" alt="Visitor Photo">
+    </div>
+    </header>
+    <div style="text-align: center; margin-top: 16px;">
+  <button id="download-pdf-btn" style="padding: 8px 16px; background-color: #02711a; color: white; border: none; border-radius: 5px; cursor: pointer; margin-bottom:8px;">
+    Download Pass
+  </button>
+</div>
+
+    <main>
+    <div class="main-content">
+    <h1 class="main-heading">Shikhar</h1>
+    <h3 class="sub-heading">VISITOR PASS</h3>
+
+    <p class="top-details">Visitor Details</p>
+    <hr>
+
+    <table class="details-table">
+      <tr>
+        <td><b>Name -</b> <span id="visitor-name"></span></td>
+        <td><b>Mobile Number -</b> <span id="visitor-mobile"></span></td>
+      </tr>
+      <tr>
+        <td><b>Organisation Name -</b> <span id="organisation-name"></span></td>
+        <td><b>Designation -</b> <span id="designation"></span></td>
+      </tr>
+      <tr>
+        <td><b>Country -</b> <span id="country"></span></td>
+        <td><b>Address -</b> <span id="address"></span></td>
+      </tr>
+      <tr>
+        <td><b>Visiting Purpose -</b> <span id="visiting-purpose"></span></td>
+        <td><b>Visiting Date -</b> <span id="visiting-date"></span></td>
+      </tr>
+    </table>
+
+    <p class="bottom-details">RITES Official Details</p>
+    <hr>
+
+    <table class="details-table">
+      <tr>
+        <td><b>Name -</b> <span id="employee-name"></span></td>
+        <td><b>Designation -</b> <span id="desg"></span></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <b>*The bearer of this pass is permitted to enter Shikhar on </b>
+        </td>
+      </tr>
+    </table>
+
+    <div class="signature">
+      <p>Visitor Signature</p>
+      <p>Official Signature</p>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+    <button onclick="window.location.href='dashboard.html'" style="padding: 8px 16px; background-color: #02711a; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    Back to Dashboard
+    </button>
+    </div>
+
+  </div>
+</main>
+
+<script src="js/pass.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+</body>
+</html>

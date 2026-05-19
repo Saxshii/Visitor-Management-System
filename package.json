@@ -1,0 +1,20 @@
+{
+  "name": "xrites",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Made an Visitor management System in my 6 weeks internship at RITES Lmt. gurugram. the vistor management system consist of generated pass of each visitor coming and punch out time along with all the previous records too.",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  }
+}
