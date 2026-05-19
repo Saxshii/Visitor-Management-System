@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const mysql = require("mysql2");
 const express = require("express");
 const bcrypt = require("bcryptjs");
@@ -27,7 +29,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-require('dotenv').config();
 
 const database = mysql.createConnection({
     host: process.env.DB_HOST,
