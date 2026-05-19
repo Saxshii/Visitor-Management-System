@@ -27,7 +27,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-<<<<<<< HEAD
 require('dotenv').config()
 
 const database = mysql.createConnection({
@@ -36,15 +35,6 @@ const database = mysql.createConnection({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
 });
-=======
-const database = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Ashu1065',
-    database: 'project'
-});
-
->>>>>>> a8918222b03335383067826c5d6a0c23e85ac9b0
 database.connect((err) => {
     if (err) {
         console.log("Connection failed", err);
@@ -53,14 +43,6 @@ database.connect((err) => {
     }
 });
 
-<<<<<<< HEAD
-=======
-// Test Route
-app.get("/", (req, res) => {
-    res.send("Server is running");
-});
-
->>>>>>> a8918222b03335383067826c5d6a0c23e85ac9b0
 // User Signup
 app.post("/signup", (req, res) => {
     const { name, email, password, confirm } = req.body;
@@ -211,13 +193,10 @@ app.patch('/api/visitor-punchout/:id', (req, res) => {
     });
 });
 
-<<<<<<< HEAD
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "signup.html"));
 });
 
-=======
->>>>>>> a8918222b03335383067826c5d6a0c23e85ac9b0
 // Start Server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
