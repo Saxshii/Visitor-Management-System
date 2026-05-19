@@ -3,17 +3,12 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
-=======
-    "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> a8918222b03335383067826c5d6a0c23e85ac9b0
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-<<<<<<< HEAD
   "description": "Made an Visitor management System in my 6 weeks internship at RITES Lmt. gurugram. the vistor management system consist of generated pass of each visitor coming and punch out time along with all the previous records too.",
   "dependencies": {
     "bcryptjs": "^3.0.3",
@@ -21,13 +16,5 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mysql2": "^3.22.3"
-=======
-  "description": "",
-  "dependencies": {
-    "bcryptjs": "^3.0.2",
-    "body-parser": "^2.2.0",
-    "express": "^5.1.0",
-    "mysql2": "^3.14.1"
->>>>>>> a8918222b03335383067826c5d6a0c23e85ac9b0
   }
 }
