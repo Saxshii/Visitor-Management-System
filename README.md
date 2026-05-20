@@ -1,81 +1,90 @@
-# internship-work
-Made an Visitor management System in my 6 weeks internship at RITES Lmt. gurugram. the vistor management system consist of generated pass of each visitor coming and punch out time along with all the previous records too.  
+# Visitor Management System 🏢
+
+A full-stack **Visitor Management System** built during a 6-week internship at **RITES Limited, Gurugram**. .
+
+🔗 **Live Demo:** [https://visitor-management-system-wxsk.onrender.com](https://visitor-management-system-wxsk.onrender.com)
+
+---
+
+## Overview
+
+The system digitizes the visitor entry process — generating gate passes, tracking punch-in/out times, and maintaining complete visitor records. it's a digital solution to replace manual visitor registers at their office premises. 
 
 ---
 
 ## Features
 
-- Secure Login & Signup Authentication
-- Password Encryption using bcrypt
-- Generate Digital Visitor Gate Pass
-- Visitor Photo Capture using Camera & Canvas
-- Daily Visitor Report Management
-- Visitor Summary Report Dashboard
-- Punch In / Punch Out Tracking
-- MySQL Database Integration
-- Responsive Dashboard Interface
+- Secure Login & Signup with password encryption (bcrypt)
+-  Live visitor photo capture using Camera & Canvas API
+-  Digital Gate Pass generation for each visitor
+-  Punch In / Punch Out time tracking
+-  Daily Visitor Report with filterable records
+-  Visitor Summary Report Dashboard
+-  Persistent MySQL database storage
+-  Responsive dashboard interface
 
 ---
 
 ## Tech Stack
 
-### Frontend
-- HTML, CSS, JavaScript
-
-### Backend
-- Node.js, Express.js
-
-### Database
-- MySQL
-
-### Libraries & Tools
-- bcryptjs, mysql2, Canvas API
+| Layer | Technology |
+|-------|-----------|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | Node.js, Express.js |
+| Database | MySQL |
+| Auth | bcryptjs |
+| Image Capture | Canvas API |
+| Deployment | Render |
 
 ---
 
 ## Project Structure
 
-```bash
-RITES/
+```
+Visitor-Management-System/
 │
 ├── public/
-│   ├── css/
-│   ├── js/
-│   ├── dashboard.html
-│   ├── login.html
-│   ├── signup.html
-│   ├── gatepass.html
-│   ├── today-report.html
-│   ├── summary-report.html
-│   └── visitor-pass.html
+│   ├── css/                  # Stylesheets
+│   ├── js/                   # Client-side scripts
+│   ├── dashboard.html        # Main dashboard
+│   ├── login.html            # Login page
+│   ├── signup.html           # Signup page
+│   ├── gatepass.html         # Gate pass generator
+│   ├── today-report.html     # Daily visitor report
+│   ├── summary-report.html   # Summary dashboard
+│   └── visitor-pass.html     # Visitor pass view
 │
-├── uploads/
-├── server.js
+├── uploads/                  # Visitor photos
+├── server.js                 # Express server & API routes
 ├── package.json
-├── .env
+├── .env                      # Environment variables (not committed)
 └── README.md
 ```
 
 ---
 
-## Installation & Setup
+## Local Setup
 
-### Clone Repository
+### Prerequisites
+- Node.js (v16+)
+- MySQL
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Saxshii/Visitor-Management-System.git
 cd Visitor-Management-System
 ```
 
-### Install Dependencies
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### Configure Environment Variables
+### 3. Configure environment variables
 
-Create a `.env` file:
+Create a `.env` file in the root directory:
 
 ```env
 DB_HOST=localhost
@@ -85,19 +94,19 @@ DB_NAME=project
 PORT=3000
 ```
 
-### Run Project
+### 4. Set up the database
+
+Import the SQL schema into MySQL:
+
+```bash
+mysql -u root -p project < schema.sql
+```
+
+### 5. Start the server
 
 ```bash
 npm start
 ```
 
-Open in browser:
+Visit: [http://localhost:3000](http://localhost:3000)
 
-```bash
-http://localhost:3000
-```
-
-## Developed By
-
-**Sakshi **  
-B.Tech CSE Student
